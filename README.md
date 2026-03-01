@@ -2,6 +2,20 @@
 
 Practical example repository for generating and managing n8n workflows with an OpenAI Codex skill plus a small n8n API helper script.
 
+n8n is powerful, but development is mainly GUI-based.
+When workflows grow larger, editing and iterating through the UI becomes inefficient.
+
+This repo explores a different approach:
+
+- Generate workflows using AI (vibe coding style)
+- Modify workflows programmatically
+- Use exported JSON examples as training/context
+- Deploy workflows via API instead of manual UI steps
+
+The goal is to move n8n workflow development from GUI-only -> to AI-assisted code-driven development.
+
+If you're working with n8n and want a more scalable way to build workflows, feel free to check it out.
+
 ## What this repo is for
 
 - Build a local reference corpus of real workflow JSON files.
