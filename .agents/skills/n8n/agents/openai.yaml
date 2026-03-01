@@ -1,0 +1,4 @@
+interface:
+  display_name: "n8n Helper"
+  short_description: "Use n8n Public API reliably from Codex"
+  default_prompt: "Use $n8n to authenticate, paginate, and call n8n Public API endpoints safely."

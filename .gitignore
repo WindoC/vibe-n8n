@@ -1,0 +1,25 @@
+# Local env and secrets
+.env
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.python-version
+
+# Local scratch and generated test outputs
+.temp/
+tmp-*.json
+
+# Exported workflow dumps (generated)
+workflow/
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
