@@ -11,17 +11,11 @@ Practical example repository for generating and managing n8n workflows with an O
 
 ## Example captures
 
-Workflow generation and API upload example:
-
-![Workflow generation example](./example_en.png)
-
-Additional capture 1:
-
-![Workflow capture 1](./example_cn_1.png)
-
-Additional capture 2:
-
-![Workflow capture 2](./example_cn_2.png)
+<p align="center">
+  <img src="./example_en.png" alt="Workflow generation example" width="32%" />
+  <img src="./example_cn_1.png" alt="Workflow capture 1" width="32%" />
+  <img src="./example_cn_2.png" alt="Workflow capture 2" width="32%" />
+</p>
 
 ## Important: Do this first
 
@@ -59,14 +53,19 @@ uv venv
 Copy-Item .env.example .env
 ```
 
-3. Set API values in `.env`:
+3. Link this repo to your n8n API key:
+   - In your n8n main page, go to:
+     `Settings -> n8n API -> Create an API Key`
+   - Use:
+     - `Label`: `codex`
+     - `Expiration`: `No Expiration`
+   - Copy the generated key (you will paste it into `.env` in the next step).
+
+4. Set API values in `.env`:
 ```env
 N8N_BASE_URL=https://your-n8n-host/
 N8N_API_KEY=replace-with-your-api-key
 ```
-
-4. Never commit secrets.
-`.env` and `auth.txt` should stay local only.
 
 ## Core files
 
@@ -143,29 +142,6 @@ If you use another tool, ask that tool to:
 1. Convert this skill structure into its own skill/agent format.
 2. Preserve the same n8n API guardrails and workflow-generation rules.
 3. Re-map file paths and command conventions as needed.
-
-## Public repo checklist
-
-Use this checklist before publishing or updating this repository on GitHub:
-
-1. Add a license file (`LICENSE`) and mention it in the repo description.
-2. Keep secrets out of git:
-   - Never commit `.env`, `auth.txt`, API keys, tokens, or credential exports.
-   - Verify `.gitignore` includes all local secret files.
-3. Keep examples safe:
-   - Remove or anonymize chat IDs, webhook URLs, internal hostnames, and user identifiers in shared workflow JSON files.
-   - Avoid committing production credential IDs unless they are already invalid/sanitized.
-4. Provide reproducible setup:
-   - Keep `.env.example` minimal and non-sensitive.
-   - Ensure all commands in `README.md` run with `uv run`.
-5. Add validation checks in CI (recommended):
-   - JSON validity check for `workflow/*.json`.
-   - Optional lint/check for docs and scripts.
-6. Document contribution rules:
-   - Ask contributors to add new workflow references under `workflow/`.
-   - Ask contributors to update docs when adding new generation patterns.
-7. Tag repository scope clearly:
-   - State this is a Codex-focused skill example and may require conversion for other assistants.
 
 ## Prompt example for Codex
 

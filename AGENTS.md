@@ -16,7 +16,7 @@
 - Required keys:
   - `N8N_BASE_URL`
   - `N8N_API_KEY`
-- Do not commit secrets. `.env` and `auth.txt` are ignored in `.gitignore`.
+- Do not commit secrets. `.env` are ignored in `.gitignore`.
 
 ## Main Script
 - API helper script: `.agents/skills/n8n/scripts/n8n_api.py`
@@ -42,3 +42,26 @@
   2. Reuse proven node wiring from these examples.
   3. Generate new workflow JSON into `workflow/` before upload/edit via API.
 - If examples are insufficient, export workflows first with `uv run scripts/export_workflows.py`, then re-run analysis.
+
+## Public repo checklist
+
+Use this checklist before publishing or updating this repository on GitHub:
+
+1. Add a license file (`LICENSE`) and mention it in the repo description.
+2. Keep secrets out of git:
+   - Never commit `.env`, API keys, tokens, or credential exports.
+   - Verify `.gitignore` includes all local secret files.
+3. Keep examples safe:
+   - Remove or anonymize chat IDs, webhook URLs, internal hostnames, and user identifiers in shared workflow JSON files.
+   - Avoid committing production credential IDs unless they are already invalid/sanitized.
+4. Provide reproducible setup:
+   - Keep `.env.example` minimal and non-sensitive.
+   - Ensure all commands in `README.md` run with `uv run`.
+5. Add validation checks in CI (recommended):
+   - JSON validity check for `workflow/*.json`.
+   - Optional lint/check for docs and scripts.
+6. Document contribution rules:
+   - Ask contributors to add new workflow references under `workflow/`.
+   - Ask contributors to update docs when adding new generation patterns.
+7. Tag repository scope clearly:
+   - State this is a Codex-focused skill example and may require conversion for other assistants.
