@@ -9,6 +9,20 @@ Practical example repository for generating and managing n8n workflows with an O
 - Generate new workflows from that learned pattern.
 - Upload, edit, and activate workflows through the n8n Public API.
 
+## Example captures
+
+Workflow generation and API upload example:
+
+![Workflow generation example](./example_en.png)
+
+Additional capture 1:
+
+![Workflow capture 1](./example_cn_1.png)
+
+Additional capture 2:
+
+![Workflow capture 2](./example_cn_2.png)
+
 ## Important: Do this first
 
 Before asking Codex to generate workflows, collect real workflow examples.
