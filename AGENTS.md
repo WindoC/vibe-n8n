@@ -33,3 +33,12 @@
   - checking query/path parameters and constraints
   - confirming response/error schema details
 - Skill guidance should prefer `api-1.json` over memory when exact payload or field support is uncertain.
+
+## Workflow Template Corpus
+- Primary template/example folder for vibe-coding n8n workflows: `workflow/`
+- Treat `workflow/*.json` as the first reference corpus when asked to generate or revise workflows.
+- Preferred process:
+  1. Analyze existing `workflow/*.json` node patterns and connections.
+  2. Reuse proven node wiring from these examples.
+  3. Generate new workflow JSON into `workflow/` before upload/edit via API.
+- If examples are insufficient, export workflows first with `uv run scripts/export_workflows.py`, then re-run analysis.
