@@ -14,7 +14,8 @@ __pycache__/
 tmp-*.json
 
 # Exported workflow dumps (generated)
-workflow/
+workflow/*
+!workflow/placeholder.md
 
 # Editor / OS noise
 .vscode/
